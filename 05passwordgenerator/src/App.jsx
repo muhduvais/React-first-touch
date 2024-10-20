@@ -25,7 +25,7 @@ function App() {
 
     setPassword(pass);
 
-  }, [length, numberAllowed, charAllowed])
+  }, [length, numberAllowed, charAllowed])  //When any of this dependencies change hook creates (memoizes) the generatePassword function
 
   const copyPasswordToClipboard = () => {
     window.navigator.clipboard.writeText(password);
